@@ -117,7 +117,7 @@ final class WooCommerce_Fake_Account_Blocker_Request {
 	 */
 	private static function from_proxy_header() {
 		$header = (string) WooCommerce_Fake_Account_Blocker_Plugin::instance()->get_setting( 'proxy_header' );
-		$key    = isset( self::PROXY_HEADERS[ $header ] ) ? self::PROXY_HEADERS[ $header ] : 'HTTP_X_FORWARDED_FOR';
+		$key    = array_key_exists( $header, self::PROXY_HEADERS ) ? self::PROXY_HEADERS[ $header ] : 'HTTP_X_FORWARDED_FOR';
 		$value  = self::server( $key );
 
 		if ( '' === $value ) {

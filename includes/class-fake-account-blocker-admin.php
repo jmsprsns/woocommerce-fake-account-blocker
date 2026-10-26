@@ -200,7 +200,7 @@ final class WooCommerce_Fake_Account_Blocker_Admin {
 			'blocked_ips'      => '',
 			'message'          => substr( sanitize_text_field( $text( 'message' ) ), 0, 300 ),
 			'trusted_proxies'  => '',
-			'proxy_header'     => isset( WooCommerce_Fake_Account_Blocker_Request::PROXY_HEADERS[ $text( 'proxy_header' ) ] ) ? $text( 'proxy_header' ) : $defaults['proxy_header'],
+			'proxy_header'     => array_key_exists( $text( 'proxy_header' ), WooCommerce_Fake_Account_Blocker_Request::PROXY_HEADERS ) ? $text( 'proxy_header' ) : $defaults['proxy_header'],
 			'trust_private'    => $flag( 'trust_private' ),
 			'retention_days'   => $number( 'retention_days', 0, 3650 ),
 			'keep_data'        => $flag( 'keep_data' ),

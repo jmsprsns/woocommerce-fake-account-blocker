@@ -3,7 +3,7 @@
  * Plugin Name:       WooCommerce Fake Account Blocker
  * Plugin URI:        https://www.contentpowered.com
  * Description:       Stops bot registrations and spam customer accounts on WooCommerce, and finds and removes the fake accounts you already have.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 5.8
  * Requires PHP:      7.2
  * Author:            Content Powered
